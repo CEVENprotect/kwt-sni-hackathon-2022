@@ -4,7 +4,9 @@ import i18next from './i18n';
 
 // Todo: We should get rid of vsprintf and use i18next interpolation instead
 const translateWithTranslator = (translator, key, ...args) => {
+  console.log(`key: ${key}`) // key: country-history.carbonintensity.hourly
   const translation = translator(key, '');
+  console.log(`translateWithTranslator: ${translation}`) // translateWithTranslator: Carbon intensity in the last 24 hours
   if (args.length > 0) {
     return vsprintf(translation, args);
   }

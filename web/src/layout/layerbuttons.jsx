@@ -52,7 +52,7 @@ export default ({ aggregatedViewFFEnabled }) => {
   return (
     <HiddenOnMobile>
       <div className={aggregatedViewFFEnabled ? 'layer-buttons-container-FF' : 'layer-buttons-container'}>
-        <LanguageSelect />
+        {/* <LanguageSelect />
         <Link to={windToggledLocation} hasError={windDataError || !isWeatherEnabled}>
           <ButtonToggle
             active={windEnabled}
@@ -70,7 +70,7 @@ export default ({ aggregatedViewFFEnabled }) => {
             ariaLabel={__(getWeatherTranslateId('Solar', solarEnabled, isWeatherEnabled))}
             icon="weather/sun"
           />
-        </Link>
+        </Link> */}
         <ButtonToggle
           active={brightModeEnabled}
           onChange={toggleBrightMode}

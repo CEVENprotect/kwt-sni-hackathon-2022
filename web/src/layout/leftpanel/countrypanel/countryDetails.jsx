@@ -48,19 +48,19 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
 
   return (
     <React.Fragment>
-      <BySource>
-        {__(selectedTimeAggregate !== TIME.HOURLY ? 'country-panel.averagebysource' : 'country-panel.bysource')}
-      </BySource>
-
-      <Countrytable />
+      {/* <BySource>
+        {__(selectedTimeAggregate !== TIME.HOURLY ? 'country-panel.cumulative' : 'country-panel.bysource')}
+      </BySource> */}
+      <br/>
+      {/* <Countrytable /> */}
 
       <hr />
       <div className="country-history">
         <CountryHistoryTitle
-          translationKey={tableDisplayEmissions ? 'country-history.emissions' : 'country-history.carbonintensity'}
+          translationKey={tableDisplayEmissions ? 'country-history.emissions' : 'country-history.numberOfSpecies'}
         />
         <br />
-        <ProContainer>
+        {/* <ProContainer>
           <Icon iconName="file_download" size={16} />
           <a
             href="https://electricitymaps.com/?utm_source=app.electricitymaps.com&utm_medium=referral&utm_campaign=country_panel"
@@ -69,17 +69,18 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
           >
             {__('country-history.Getdata')}
           </a>
-        </ProContainer>
+        </ProContainer> */}
+        {/* this graph is interesting for manipulation */}
         {tableDisplayEmissions ? <Countryhistoryemissionsgraph /> : <Countryhistorycarbongraph />}
-        <CountryHistoryTitle
+        {/* <CountryHistoryTitle
           translationKey={
             tableDisplayEmissions
               ? `country-history.emissions${electricityMixMode === 'consumption' ? 'origin' : 'production'}`
               : `country-history.electricity${electricityMixMode === 'consumption' ? 'origin' : 'production'}`
           }
-        />
+        /> */}
         <br />
-        <ProContainer>
+        {/* <ProContainer>
           <Icon iconName="file_download" size={16} />
           <a
             href="https://electricitymaps.com/?utm_source=app.electricitymap.org&utm_medium=referral&utm_campaign=country_panel"
@@ -103,17 +104,17 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
           )}
 
           <Countryhistorymixgraph isOverlayEnabled={isMixGraphOverlayEnabled} />
-        </div>
+        </div> */}
 
-        {selectedTimeAggregate === TIME.HOURLY && (
+        {/* {selectedTimeAggregate === TIME.HOURLY && (
           <>
             <CountryHistoryTitle translationKey={'country-history.electricityprices'} />
             <Countryhistorypricesgraph />
           </>
-        )}
+        )} */}
       </div>
       <hr />
-      <StyledSources>
+      {/* <StyledSources>
         {isDataEstimated && <CountryDataInfo text={__('country-panel.dataIsEstimated')} />}
         {selectedTimeAggregate !== TIME.HOURLY && <CountryDataInfo text={__('country-panel.exchangesAreMissing')} />}
         {__('country-panel.source')}
@@ -141,7 +142,7 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
         {__('country-panel.helpfrom')}
         <ContributorList />
         <SocialButtons hideOnDesktop />
-      </StyledSources>
+      </StyledSources> */}
     </React.Fragment>
   );
 };

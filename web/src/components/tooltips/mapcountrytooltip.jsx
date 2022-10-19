@@ -57,14 +57,14 @@ const TooltipContent = React.memo(
             <div id="tooltip-country-lowcarbon-gauge" className="country-gauge-wrap">
               <CircularGauge percentage={fossilFuelPercentage} />
             </div>
-            <div className="country-col-headline">{__('country-panel.lowcarbon')}</div>
+            <div className="country-col-headline">{__('country-panel.treeOfLifeCovered')}</div>
             <div className="country-col-subtext" />
           </div>
           <div className="country-col country-renewable-wrap">
             <div id="tooltip-country-renewable-gauge" className="country-gauge-wrap">
               <CircularGauge percentage={renewablePercentage} />
             </div>
-            <div className="country-col-headline">{__('country-panel.renewable')}</div>
+            <div className="country-col-headline">{__('country-panel.endemic')}</div>
           </div>
         </CountryTableHeaderInner>
       </div>

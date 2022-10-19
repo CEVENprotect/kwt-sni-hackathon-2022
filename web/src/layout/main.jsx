@@ -132,7 +132,7 @@ const Main = ({ electricityMixMode }) => {
               <Map />
               <MobileLayerButtons />
               <Legend />
-              <HiddenOnMobile className="controls-container">
+              {/* <HiddenOnMobile className="controls-container">
                 <Toggle
                   infoHTML={__('tooltips.cpinfo')}
                   onChange={(value) => dispatchApplication('electricityMixMode', value)}
@@ -155,7 +155,7 @@ const Main = ({ electricityMixMode }) => {
                     tooltipStyle={{ left: 5, width: 204, top: 85 }}
                   />
                 )}
-              </HiddenOnMobile>
+              </HiddenOnMobile> */}
               <LayerButtons aggregatedViewFFEnabled={isAggregatedFFEnabled} />
             </MapContainer>
             {/* // TODO: Get CountryPanel shown here in a separate BottomSheet behind the other one */}

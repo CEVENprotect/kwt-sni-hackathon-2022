@@ -51,9 +51,9 @@ export const CountryHeader = ({ parentPage, zoneId, data, isMobile, isDataAggreg
           <div style={{ flexGrow: 1 }}>
             <div className="country-name">{getZoneNameWithCountry(zoneId)}</div>
             <CountryTime>
-              {shownDatetime && <StyledTimeDisplay />}
+              last eDNA sample taken: &nbsp; { shownDatetime && <StyledTimeDisplay />}
               {isDataEstimated && <ZoneLabel type={LABEL_TYPES.ESTIMATED} isMobile={isMobile} />}
-              {isDataAggregated && <ZoneLabel type={LABEL_TYPES.AGGREGATED} isMobile={isMobile} />}
+              {/* {isDataAggregated && <ZoneLabel type={LABEL_TYPES.AGGREGATED} isMobile={isMobile} />} */}
             </CountryTime>
           </div>
           {disclaimer && <CountryDisclaimer text={disclaimer} isMobile={isMobile} />}

@@ -86,6 +86,7 @@ const TimeSlider = ({
 
   const timeValue = selectedTimeValue || anchoredTimeValue || endTimeValue;
 
+  console.log(`datetimes: ${datetimes}`)
   return (
     <div className={className}>
       <TimeSliderTooltip
@@ -98,7 +99,7 @@ const TimeSlider = ({
         <TimeSliderHeader />
       </HiddenOnMobile>
       <TimeControls
-        selectedTimeAggregate={selectedTimeAggregate}
+        selectedTimeAggregate={TIME.MONTHLY}
         handleTimeAggregationChange={handleTimeAggregationChange}
       />
       <TimeSliderInput
@@ -118,7 +119,7 @@ const TimeSlider = ({
         transform={`translate(${AXIS_HORIZONTAL_MARGINS}, 0)`}
         className="time-slider-axis"
         displayLive={selectedTimeAggregate === TIME.HOURLY}
-        selectedTimeAggregate={selectedTimeAggregate}
+        selectedTimeAggregate={TIME.MONTHLY}
         isLoading={isLoading}
       />
     </div>

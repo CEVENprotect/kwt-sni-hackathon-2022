@@ -4,24 +4,24 @@ import styled from 'styled-components';
 import SharedHeader from '../components/sharedheader';
 import OpenPositionsBadge from '../components/openpositionsbadge';
 
-const logo = resolvePath('images/electricitymap-logo.svg');
+const logo = resolvePath('images/CEVEN-Logo-Cut.png');
 
 const headerLinks = [
-  {
-    label: 'Live',
-    active: true,
-    id: 'live',
-  },
-  {
-    label: (
-      <React.Fragment>
-        We&apos;re hiring!
-        <OpenPositionsBadge />
-      </React.Fragment>
-    ),
-    href: 'https://electricitymaps.com/jobs/#joboffers?utm_source=app.electricitymaps.com&utm_medium=referral',
-    id: 'jobs',
-  },
+  // {
+  //   label: 'Live',
+  //   active: true,
+  //   id: 'live',
+  // },
+  // {
+  //   label: (
+  //     <React.Fragment>
+  //       We&apos;re hiring!
+  //       <OpenPositionsBadge />
+  //     </React.Fragment>
+  //   ),
+  //   href: 'https://electricitymaps.com/jobs/#joboffers?utm_source=app.electricitymaps.com&utm_medium=referral',
+  //   id: 'jobs',
+  // },
 
   {
     label: 'Open Source',
@@ -34,10 +34,15 @@ const headerLinks = [
     id: 'blog',
   },
   {
-    label: 'Get our data',
-    href: 'https://electricitymaps.com?utm_source=app.electricitymaps.com&utm_medium=referral',
-    id: 'get-data',
-  },
+    label: 'About us',
+    href: 'https://electricitymaps.com/blog/?utm_source=app.electricitymaps.com&utm_medium=referral',
+    id: 'aboutus',
+  }
+  // {
+  //   label: 'Get our data',
+  //   href: 'https://electricitymaps.com?utm_source=app.electricitymaps.com&utm_medium=referral',
+  //   id: 'get-data',
+  // },
 ];
 
 const Container = styled.div`

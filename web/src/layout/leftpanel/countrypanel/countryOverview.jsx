@@ -39,17 +39,17 @@ export const CountryOverview = ({
             />
             {tooltip && <LowCarbonInfoTooltip position={tooltip.position} onClose={() => setTooltip(null)} />}
           </div>
-          <div className="country-col-headline">{__('country-panel.lowcarbon')}</div>
+          <div className="country-col-headline">{__('country-panel.treeOfLifeCovered')}</div>
           <div className="country-col-subtext" />
         </div>
         <div className="country-col country-renewable-wrap">
           <div id="country-renewable-gauge" className="country-gauge-wrap">
             <CountryRenewableGauge />
           </div>
-          <div className="country-col-headline">{__('country-panel.renewable')}</div>
+          <div className="country-col-headline">{__('country-panel.endemic')}</div>
         </div>
       </CountryTableHeaderInner>
-      <div className="country-show-emissions-wrap">
+      {/* <div className="country-show-emissions-wrap">
         <div className="menu">
           <button type="button" onClick={switchToZoneProduction} className={!tableDisplayEmissions ? 'selected' : null}>
             {__(`country-panel.electricity${electricityMixMode}`)}
@@ -59,7 +59,7 @@ export const CountryOverview = ({
             {__('country-panel.emissions')}
           </button>
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

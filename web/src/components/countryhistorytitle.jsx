@@ -16,6 +16,11 @@ export const CountryHistoryTitle = ({ translationKey }) => {
   /*
   Use local for aggregation if exists, otherwise use local default if exists. If no translation exists, use english
   */
+
+ console.log("translationKey")
+ console.log(translationKey)
+ console.log("translationKey")
+ console.log(__(`${translationKey}.${aggregation}`))
   return (
     <Text>
       {localExists

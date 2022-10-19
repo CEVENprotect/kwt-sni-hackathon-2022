@@ -31,22 +31,22 @@ const DateOptionWrapper = styled.div`
 `;
 
 const getOptions = (language) => [
-  {
-    key: TIME.HOURLY,
-    label: formatTimeRange(language, TIME.HOURLY),
-  },
-  {
-    key: TIME.DAILY,
-    label: formatTimeRange(language, TIME.DAILY),
-  },
+  // {
+  //   key: TIME.HOURLY,
+  //   label: formatTimeRange(language, TIME.HOURLY),
+  // },
+  // {
+  //   key: TIME.DAILY,
+  //   label: formatTimeRange(language, TIME.DAILY),
+  // },
   {
     key: TIME.MONTHLY,
     label: formatTimeRange(language, TIME.MONTHLY),
   },
-  {
-    key: TIME.YEARLY,
-    label: formatTimeRange(language, TIME.YEARLY),
-  },
+  // {
+  //   key: TIME.YEARLY,
+  //   label: formatTimeRange(language, TIME.YEARLY),
+  // },
 ];
 
 const TimeControls = ({ selectedTimeAggregate, handleTimeAggregationChange }) => {

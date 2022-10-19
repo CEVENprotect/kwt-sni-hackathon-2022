@@ -84,7 +84,7 @@ const LegendItem = ({ isEnabled, label, unit, children }) =>
   !isEnabled ? null : (
     <LegendItemWrapper>
       <div>
-        {label} <small>({unit})</small>
+        {label}
       </div>
       {children}
     </LegendItemWrapper>
@@ -138,7 +138,7 @@ const Legend = ({ co2ColorbarValue, legendVisible, solarColorbarValue, windColor
               ticksCount={5}
             />
           </LegendItem>
-          <LegendItem label={__('legends.carbonintensity')} unit="gCO₂eq/kWh" isEnabled>
+          <LegendItem label={__('legends.speciesRichness')} unit="da" isEnabled>
             <HorizontalColorbar
               id="co2intensity-bar"
               colorScale={co2ColorScale}

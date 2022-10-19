@@ -53941,6 +53941,7 @@
           ]
         ]
       }
-    }
-  ]
+    },
+{ "type": "Feature", "properties": { "zoneName": "Bermuda-Triangle", "countryKey": "BTL", "countryName": "Bermuda-Triangle" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -77.598418213122883, 27.620932561798988 ], [ -71.302599542942616, 23.039719827327382 ], [ -71.19543667196082, 29.523073521725792 ], [ -77.598418213122883, 27.620932561798988 ] ] ] ] } }
+]
 }

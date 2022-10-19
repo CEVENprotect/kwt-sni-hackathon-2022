@@ -7,7 +7,9 @@ import { mapValues } from 'lodash';
 
 export function useCurrentZoneHistory() {
   const { zoneId } = useParams();
+  // selectedTimeAggregate is e.g sth like TIME.HOURLY
   const selectedTimeAggregate = useSelector((state) => state.application.selectedTimeAggregate);
+  // where is state.data from? how is redux setup?
   const zones = useSelector((state) => state.data.zones);
   return useMemo(() => {
     if (zones[zoneId]) {

@@ -25,7 +25,7 @@ const initialApplicationState = {
   infoModalOpen: false,
   faqModalOpen: false,
   settingsModalOpen: false,
-  electricityMixMode: 'consumption',
+  electricityMixMode: 'production',
   isCordova: window.isCordova,
   isEmbedded: window.top !== window.self,
   // We have to track this here because map layers currently can't
@@ -53,7 +53,7 @@ const initialApplicationState = {
   solarColorbarValue: null,
   webGLSupported: true,
   windColorbarValue: null,
-  selectedTimeAggregate: TIME.HOURLY,
+  selectedTimeAggregate: TIME.MONTHLY,
 
   // TODO(olc): move this to countryPanel once all React components have been made
   tableDisplayEmissions: false,

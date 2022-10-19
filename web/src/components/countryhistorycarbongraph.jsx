@@ -31,12 +31,13 @@ const mapStateToProps = (state) => ({
   isMobile: state.application.isMobile,
 });
 
+// this is where data is not manipulated
 const CountryHistoryCarbonGraph = ({ electricityMixMode, isMobile }) => {
   const [tooltip, setTooltip] = useState(null);
   const co2ColorScale = useCo2ColorScale();
-
+  console.log("CountryHistoryCarbonGraph")
   const historyData = useCurrentZoneHistory();
-
+  console.log(historyData);
   // Recalculate graph data only when the history data is changed
   const { data, layerKeys, layerFill } = useMemo(
     () => prepareGraphData(historyData, co2ColorScale, electricityMixMode),
@@ -67,7 +68,7 @@ const CountryHistoryCarbonGraph = ({ electricityMixMode, isMobile }) => {
         data={data}
         layerKeys={layerKeys}
         layerFill={layerFill}
-        valueAxisLabel="g / kWh"
+        valueAxisLabel="Species"
         markerUpdateHandler={markerUpdateHandler}
         markerHideHandler={markerHideHandler}
         isMobile={isMobile}

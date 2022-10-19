@@ -20,6 +20,7 @@ const SOLAR_DATA_FETCH_FAILED = createAction('weather/solar-fetch-failed');
 const SOLAR_DATA_FETCH_SUCCEDED = createAction('weather/solar-fetch-succeded');
 const SOLAR_DATA_FETCH_REQUESTED = createAction('weather/solar-fetch-requested');
 
+// this is part of data creation
 function initDataState() {
   const geographies = constructTopos();
   const zones = {};
@@ -33,9 +34,11 @@ function initDataState() {
     zone.geography = geographies[key];
     zone.config = {};
     Object.keys(TIME).forEach((agg) => {
+      // but where does the data get filled in
       zone[TIME[agg]] = { details: [], overviews: [], isExpired: true };
     });
 
+    // zoneConfig is Zone object from zones.json
     zone.config.capacity = zoneConfig.capacity;
     zone.config.contributors = zoneConfig.contributors;
     zone.config.timezone = zoneConfig.timezone;
@@ -62,6 +65,7 @@ function initDataState() {
     };
   });
 
+  // data object
   return {
     failedRequestType: null,
     hasInitializedGrid: false,
@@ -80,6 +84,7 @@ function initDataState() {
   };
 }
 
+// zoneData=>zones[zoneId], aggregate=>selectedTimeAggregate
 function combineZoneData(zoneData, aggregate) {
   // Combines details and overviews and other relevant keys
   // from zoneData for a specific aggregate into a single object

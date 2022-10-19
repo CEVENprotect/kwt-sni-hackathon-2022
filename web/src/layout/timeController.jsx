@@ -19,32 +19,37 @@ const mapStateToProps = (state) => ({
 const StyledTimeSlider = styled(TimeSlider)`
   padding: 12px 24px;
   background: white;
-  left: 10px;
+  // left: 10px;
   bottom: 10px;
   border-radius: 15px;
   text-align: center;
   overflow-y: visible;
   width: calc((14vw + 16rem) - 70px); // Ensures it is smaller than countrypanel
   z-index: 99;
-  position: fixed;
+  position: absolute;
+  left: 40%;
+  // position: fixed;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 
   .domain {
     display: none;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1000px) {
     width: auto;
+    left: 10px;
+    position: fixed;
   }
 
   @media (max-width: 480px) {
     width: auto;
+    left: 10px;
     box-shadow: none;
     padding: 0px 12px;
     height: auto;
     border-radius: 0;
-    position: relative;
+    // position: relative;
     bottom: auto;
-    left: auto;
+    // left: auto;
   }
 `;
 

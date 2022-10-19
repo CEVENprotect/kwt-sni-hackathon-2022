@@ -15,6 +15,9 @@ import { useWindEnabled, useSolarEnabled, useFeatureToggle } from './router';
 export function useConditionalZoneHistoryFetch() {
   const { zoneId } = useParams();
   const zones = useSelector((state) => state.data.zones);
+  console.log(zones);
+  // zones.CH.daily.details => array[31]
+  // zones.CH.daily.overviews => array[31] (each a object => data used for quick view when hovering or in detail mode at the top)
   const features = useFeatureToggle();
   const selectedTimeAggregate = useSelector((state) => state.application.selectedTimeAggregate);
   const dispatch = useDispatch();
@@ -23,6 +26,7 @@ export function useConditionalZoneHistoryFetch() {
   useEffect(() => {
     const isExpired = zones[zoneId]?.[selectedTimeAggregate].isExpired;
     if (zoneId && isExpired) {
+      // this is interesting
       dispatch(ZONE_HISTORY_FETCH_REQUESTED({ zoneId, features, selectedTimeAggregate }));
     }
   }, [zoneId, dispatch, features, selectedTimeAggregate, zones]);

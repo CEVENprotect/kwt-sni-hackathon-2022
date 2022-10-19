@@ -11,6 +11,7 @@ import { getTotalElectricity } from '../helpers/zonedata';
 import CountryPanelEmissionsTooltip from './tooltips/countrypanelemissionstooltip';
 import AreaGraph from './graph/areagraph';
 
+// this function needs also modification
 const prepareGraphData = (historyData) => {
   if (!historyData || !historyData[0]) {
     return {};
@@ -37,9 +38,10 @@ const mapStateToProps = (state) => ({
 
 const CountryHistoryEmissionsGraph = ({ isMobile }) => {
   const [tooltip, setTooltip] = useState(null);
-
+  console.log("CountryHistoryEmissionsGraph")
+  // study data source
   const historyData = useCurrentZoneHistory();
-
+  console.log(historyData);
   // Recalculate graph data only when the history data is changed
   const { data, layerKeys, layerFill } = useMemo(() => prepareGraphData(historyData), [historyData]);
 

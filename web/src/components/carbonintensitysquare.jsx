@@ -52,11 +52,11 @@ const CarbonIntensitySquare = ({ value, withSubtext }) => {
     <div className="country-col">
       <Box color={co2ColorScale(value)}>
         <div>
-          <Value data-test-id="co2-square-value">{Math.round(value) || '?'}</Value>g
+          <Value data-test-id="co2-square-value">{Math.round(value) || '?'}</Value>
         </div>
       </Box>
-      <div className="country-col-headline">{__('country-panel.carbonintensity')}</div>
-      {withSubtext && <div className="country-col-subtext">(gCO₂eq/kWh)</div>}
+      <div className="country-col-headline">{__('country-panel.numberOfSpecies')}</div>
+      {withSubtext && <div className="country-col-subtext">(last eDNA analysis)</div>}
     </div>
   );
 };
