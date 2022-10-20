@@ -21,7 +21,7 @@
     "contribute": "Contribute by <a href=\"%s\" target=\"_blank\">adding your territory</a>"
   },
   "mobile-main-menu": {
-    "map": "Electricity Maps",
+    "map": "Biodiversity Maps",
     "areas": "Areas",
     "about": "About"
   },
@@ -89,7 +89,7 @@
     "electricityorigin": { "default": "Origin of electricity in the last %1$s" },
     "electricityproduction": { "default": "Electricity production in the last %1$s" },
     "electricityprices": { "default": "Electricity prices in the last %1$s" },
-    "Getdata": "Get hourly historical, live, and forecast data with Electricity Maps API"
+    "Getdata": "Get hourly historical, live, and forecast data with Biodiversity Maps API"
   },
   "footer": {
     "foundbugs": "Found bugs or have ideas? Report them",
@@ -122,6 +122,7 @@
     "hideSolarLayer": "Hide solar layer",
     "weatherDisabled": "Weather data is not available at this time",
     "toggleDarkMode": "Toggle dark-mode",
+    "toggleColorBlindMode": "Toggle color-blind",
     "noParserInfo": "No data available",
     "temporaryDataOutage": "Live data temporarily unavailable",
     "production": "production",
@@ -227,7 +228,7 @@
   "aboutUs": {
     "groupName": "About us",
     "whoAreYou-question": "Who are you?",
-    "whoAreYou-answer": "The app is developed and maintained by <a href=\"https://electricitymaps.com/\" target=\"_blank\">Electricity Maps</a>, a Danish startup company. Our goal is to help humanity reach a sustainable state of existence by quantifying, and making widely accessible, the climate impact of the daily choices we make.",
+    "whoAreYou-answer": "The app is developed and maintained by <a href=\"https://www.ceven.tech/\" target=\"_blank\">CEVEN Tech</a>, a Swiss startup company. Our goal is to help humanity reach a sustainable state of existence by quantifying, and making widely accessible, the biodiversity impact of the daily choices we make.",
     "feedback-question": "Can I give you some feedback?",
     "feedback-answer": "Please do! Please fill out <a href=\"https://forms.gle/VHaeHzXyGodFKZY18\" target=\"_blank\">our feedback form</a> or <a href=\"mailto:app@electricitymaps.com\">send us an email!</a>",
     "contribute-question": "Can I contribute to your project?",

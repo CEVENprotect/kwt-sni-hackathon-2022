@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import SharedHeader from '../components/sharedheader';
 import OpenPositionsBadge from '../components/openpositionsbadge';
 
-const logo = resolvePath('images/CEVEN-Logo-Cut.png');
+const logo = resolvePath('images/CEVEN_Logo_POS_RGB.svg');
 
 const headerLinks = [
   // {

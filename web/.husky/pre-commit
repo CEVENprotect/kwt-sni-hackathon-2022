@@ -2,4 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd web
-npx lint-staged
+
+# out commented by yves
+# npx lint-staged 

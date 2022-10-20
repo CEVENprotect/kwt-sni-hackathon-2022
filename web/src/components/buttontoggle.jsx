@@ -11,11 +11,13 @@ const Wrapper = styled.div`
 const Button = styled.button`
   background-color: #ffffff;
   background-image: url(${(props) =>
-    props.active ? resolvePath(`images/${props.icon}_active.svg`) : resolvePath(`images/${props.icon}.svg`)});
+    props.active ? resolvePath(`images/${props.icon.slice(0, -4)}_active.${props.icon.slice(-3,)}`) : resolvePath(`images/${props.icon}`)});
 `;
 
 const ButtonToggle = ({ active, icon, onChange, tooltip, errorMessage = null, ariaLabel }) => {
   const isMobile = useSelector((state) => state.application.isMobile);
+  console.log(`images/${icon.slice(0, )}_active.${icon.slice(-3,)}`)
+  console.log(`images/${icon}`)
 
   const [tooltipVisible, setTooltipVisible] = useState(false);
   const showTooltip = () => {

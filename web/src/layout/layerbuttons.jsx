@@ -33,9 +33,16 @@ export default ({ aggregatedViewFFEnabled }) => {
   const isWeatherEnabled = useSelector(
     (state) => state.application.selectedTimeAggregate === TIME.HOURLY && state.application.selectedZoneTimeIndex === 24
   );
+  const colorBlindModeEnabled = useSelector((state) => state.application.colorBlindModeEnabled);
+
   const toggleBrightMode = () => {
     dispatchApplication('brightModeEnabled', !brightModeEnabled);
     saveKey('brightModeEnabled', !brightModeEnabled);
+  };
+
+  const toggleColorBlindMode = () => {
+    dispatchApplication('colorBlindModeEnabled', !colorBlindModeEnabled);
+    saveKey('colorBlindModeEnabled', !colorBlindModeEnabled);
   };
 
   const Link = ({ to, hasError, children }) =>
@@ -76,8 +83,16 @@ export default ({ aggregatedViewFFEnabled }) => {
           onChange={toggleBrightMode}
           tooltip={__('tooltips.toggleDarkMode')}
           ariaLabel={__('tooltips.toggleDarkMode')}
-          icon="brightmode"
+          icon="brightmode.svg"
         />
+        <ButtonToggle
+          active={colorBlindModeEnabled}
+          onChange={toggleColorBlindMode}
+          tooltip={__('tooltips.toggleColorBlindMode')}
+          ariaLabel={__('tooltips.toggleColorBlindMode')}
+          icon="color-blind.png"
+        />
+
       </div>
     </HiddenOnMobile>
   );

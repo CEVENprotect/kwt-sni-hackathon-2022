@@ -27,6 +27,7 @@ const documentSearchKeyUpHandler = (key, searchRef) => {
 
 const StyledWrapper = styled.div`
   padding: 1rem;
+  padding-top: 32px;
   display: flex;
   flex-direction: column;
   flex: 1 1 0px;
@@ -58,7 +59,7 @@ const ZoneListPanel = () => {
 
       <ZoneList />
 
-      <InfoText />
+      {/* <InfoText /> */}
     </StyledWrapper>
   );
 };

@@ -12,10 +12,10 @@ const Wrapper = styled.header`
   display: flex;
   font-family: 'Euclid Triangle', 'Open Sans', sans-serif;
   font-size: 15px;
-  height: 58px;
+  height: 72px;
   justify-content: space-between;
   min-height: 58px; /* required for old Safari */
-  padding: 0 48px 0 25px;
+  padding: 0 48px 8px 25px;
   position: fixed;
   transition: background-color 0.5s;
   width: 100vw;
