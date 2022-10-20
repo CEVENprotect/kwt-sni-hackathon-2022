@@ -136,7 +136,7 @@
     "dataIsDelayed": "Data is delayed"
   },
   "misc": {
-    "maintitle": "Live 24/7 CO₂ emissions of electricity consumption",
+    "maintitle": "CEVEN",
     "oops": "Oops! We are having trouble reaching the server. We will try again in a few seconds.",
     "newversion": "A new version is available! Press <a onClick=\"location.reload(true);\">here</a> to reload.",
     "webgl-not-supported": "The map can't be rendered because this browser does not support WebGL.",

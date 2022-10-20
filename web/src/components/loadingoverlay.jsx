@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 // TODO: add animation to logo to indicate loading
 
 const Overlay = styled.div`
-  background-image: url(${resolvePath('images/electricitymap-loading.svg')});
+  background-image: url(${resolvePath('images/CEVEN_Logo_POS_RGB.svg')});
   background-position: 50% center, center center;
   background-repeat: no-repeat, no-repeat;
   background-size: 190px, 10rem;
