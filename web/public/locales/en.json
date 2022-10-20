@@ -123,6 +123,7 @@
     "weatherDisabled": "Weather data is not available at this time",
     "toggleDarkMode": "Toggle dark-mode",
     "toggleColorBlindMode": "Toggle color-blind",
+    "toggleLionMode": "Toggle lion-mode",
     "noParserInfo": "No data available",
     "temporaryDataOutage": "Live data temporarily unavailable",
     "production": "production",

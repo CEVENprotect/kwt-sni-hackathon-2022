@@ -92,6 +92,13 @@ export default ({ aggregatedViewFFEnabled }) => {
           ariaLabel={__('tooltips.toggleColorBlindMode')}
           icon="color-blind.png"
         />
+        <ButtonToggle
+          active={colorBlindModeEnabled}
+          onChange={toggleColorBlindMode}
+          tooltip={__('tooltips.toggleLionMode')}
+          ariaLabel={__('tooltips.toggleLionMode')}
+          icon="lion.png"
+        />
 
       </div>
     </HiddenOnMobile>
