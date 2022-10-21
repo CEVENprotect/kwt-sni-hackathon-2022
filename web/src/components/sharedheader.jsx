@@ -163,7 +163,7 @@ const SharedHeader = ({ collapsed = false, inverted = false, links = [], logo })
 
   return (
     <Wrapper inverted={inverted} collapsed={collapsed}>
-      <a href="https://app.electricitymaps.com/map">
+      <a href="https://www.ceven.tech/">
         <Logo src={logo} alt="logo" />
       </a>
       <ResponsiveMenu collapsed={collapsed}>

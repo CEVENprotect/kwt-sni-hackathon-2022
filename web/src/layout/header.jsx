@@ -25,7 +25,7 @@ const headerLinks = [
 
   {
     label: 'Open Source',
-    href: 'https://electricitymaps.com/open-source/?utm_source=app.electricitymaps.com&utm_medium=referral',
+    href: 'https://github.com/CEVENprotect/kwt-sni-hackathon-2022',
     id: 'open-source',
   },
   {
@@ -35,7 +35,7 @@ const headerLinks = [
   },
   {
     label: 'About us',
-    href: 'https://electricitymaps.com/blog/?utm_source=app.electricitymaps.com&utm_medium=referral',
+    href: 'https://www.ceven.tech/team',
     id: 'aboutus',
   }
   // {
