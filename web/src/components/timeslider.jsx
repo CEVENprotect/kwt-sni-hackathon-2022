@@ -86,7 +86,7 @@ const TimeSlider = ({
 
   const timeValue = selectedTimeValue || anchoredTimeValue || endTimeValue;
 
-  console.log(`datetimes: ${datetimes}`)
+  
   return (
     <div className={className}>
       <TimeSliderTooltip

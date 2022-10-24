@@ -15,7 +15,6 @@ import { useWindEnabled, useSolarEnabled, useFeatureToggle } from './router';
 export function useConditionalZoneHistoryFetch() {
   const { zoneId } = useParams();
   const zones = useSelector((state) => state.data.zones);
-  console.log(zones);
   // zones.CH.daily.details => array[31]
   // zones.CH.daily.overviews => array[31] (each a object => data used for quick view when hovering or in detail mode at the top)
   const features = useFeatureToggle();
@@ -34,6 +33,7 @@ export function useConditionalZoneHistoryFetch() {
 
 export function useGridDataPolling() {
   const features = useFeatureToggle();
+  console.log(`useGridDataPolling: features: ${features}`)
   const zones = useSelector((state) => state.data.zones);
   const selectedTimeAggregate = useSelector((state) => state.application.selectedTimeAggregate);
   const dispatch = useDispatch();

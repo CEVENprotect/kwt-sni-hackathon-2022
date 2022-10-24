@@ -38,10 +38,8 @@ const mapStateToProps = (state) => ({
 
 const CountryHistoryEmissionsGraph = ({ isMobile }) => {
   const [tooltip, setTooltip] = useState(null);
-  console.log("CountryHistoryEmissionsGraph")
   // study data source
   const historyData = useCurrentZoneHistory();
-  console.log(historyData);
   // Recalculate graph data only when the history data is changed
   const { data, layerKeys, layerFill } = useMemo(() => prepareGraphData(historyData), [historyData]);
 

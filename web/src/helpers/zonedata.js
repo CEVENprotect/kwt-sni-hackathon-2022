@@ -48,5 +48,5 @@ export function getTotalElectricity(zoneData, displayByEmissions) {
 }
 
 export function getCO2IntensityByMode(zoneData, electricityMixMode) {
-  return electricityMixMode === 'consumption' ? zoneData.co2intensity : zoneData.co2intensityProduction;
+  return electricityMixMode === 'consumption' ? zoneData.co2intensity : zoneData.numberOfSpecies;
 }

@@ -11,7 +11,7 @@ export const CountryRenewableGauge = (props) => {
     return <CircularGauge {...props} />;
   }
 
-  const renewableRatio = electricityMixMode === 'consumption' ? d.renewableRatio : d.renewableRatioProduction;
+  const renewableRatio = electricityMixMode === 'consumption' ? d.renewableRatio : d.endemicRatio;
   const countryRenewablePercentage = renewableRatio !== null ? renewableRatio * 100 : null;
 
   return <CircularGauge percentage={countryRenewablePercentage} {...props} />;

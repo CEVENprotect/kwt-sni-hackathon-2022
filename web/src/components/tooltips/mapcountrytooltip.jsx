@@ -8,7 +8,6 @@ import CircularGauge from '../circulargauge';
 import CarbonIntensitySquare from '../carbonintensitysquare';
 import Tooltip from '../tooltip';
 import { ZoneName } from './common';
-import { getCO2IntensityByMode } from '../../helpers/zonedata';
 import TooltipTimeDisplay from './tooltiptimedisplay';
 
 const mapStateToProps = (state) => ({
@@ -27,7 +26,7 @@ const StyledTooltipTimeDisplay = styled(TooltipTimeDisplay)`
 `;
 
 const TooltipContent = React.memo(
-  ({ isDataDelayed, hasParser, co2intensity, fossilFuelPercentage, renewablePercentage }) => {
+  ({ isDataDelayed, hasParser, numberOfSpecies, treeOfLifeCoveredPercentage, endemicRatioPercentage }) => {
     const { __ } = useTranslation();
     if (!hasParser) {
       return (
@@ -43,7 +42,7 @@ const TooltipContent = React.memo(
         </div>
       );
     }
-    if (!co2intensity) {
+    if (!numberOfSpecies) {
       if (isDataDelayed) {
         return <div className="temporary-outage-text">{__('tooltips.dataIsDelayed')}</div>;
       }
@@ -52,17 +51,17 @@ const TooltipContent = React.memo(
     return (
       <div className="zone-details">
         <CountryTableHeaderInner>
-          <CarbonIntensitySquare value={co2intensity} />
+          <CarbonIntensitySquare value={numberOfSpecies} />
           <div className="country-col country-lowcarbon-wrap">
             <div id="tooltip-country-lowcarbon-gauge" className="country-gauge-wrap">
-              <CircularGauge percentage={fossilFuelPercentage} />
+              <CircularGauge percentage={treeOfLifeCoveredPercentage} />
             </div>
             <div className="country-col-headline">{__('country-panel.treeOfLifeCovered')}</div>
             <div className="country-col-subtext" />
           </div>
           <div className="country-col country-renewable-wrap">
             <div id="tooltip-country-renewable-gauge" className="country-gauge-wrap">
-              <CircularGauge percentage={renewablePercentage} />
+              <CircularGauge percentage={endemicRatioPercentage} />
             </div>
             <div className="country-col-headline">{__('country-panel.endemic')}</div>
           </div>
@@ -79,15 +78,13 @@ const MapCountryTooltip = ({ electricityMixMode, position, zoneData, onClose, is
 
   const isDataDelayed = zoneData.delays && zoneData.delays.production;
 
-  const co2intensity = getCO2IntensityByMode(zoneData, electricityMixMode);
+  const numberOfSpecies = zoneData.numberOfSpecies;
 
-  const fossilFuelRatio =
-    electricityMixMode === 'consumption' ? zoneData.fossilFuelRatio : zoneData.fossilFuelRatioProduction;
-  const fossilFuelPercentage = fossilFuelRatio !== null ? Math.round(100 * (1 - fossilFuelRatio)) : '?';
+  const treeOfLifeCovered = zoneData.treeOfLifeCovered;
+  const treeOfLifeCoveredPercentage = treeOfLifeCovered !== null ? Math.round(100 * (1 - treeOfLifeCovered)) : '?';
 
-  const renewableRatio =
-    electricityMixMode === 'consumption' ? zoneData.renewableRatio : zoneData.renewableRatioProduction;
-  const renewablePercentage = renewableRatio !== null ? Math.round(100 * renewableRatio) : '?';
+  const endemicRatio = zoneData.endemicRatio;
+  const endemicRatioPercentage = endemicRatio !== null ? Math.round(100 * endemicRatio) : '?';
 
   return (
     <Tooltip id="country-tooltip" position={position} onClose={onClose}>
@@ -98,9 +95,9 @@ const MapCountryTooltip = ({ electricityMixMode, position, zoneData, onClose, is
       <TooltipContent
         hasParser={zoneData.hasParser}
         isDataDelayed={isDataDelayed}
-        co2intensity={co2intensity}
-        fossilFuelPercentage={fossilFuelPercentage}
-        renewablePercentage={renewablePercentage}
+        numberOfSpecies={numberOfSpecies}
+        treeOfLifeCoveredPercentage={treeOfLifeCoveredPercentage}
+        endemicRatioPercentage={endemicRatioPercentage}
       />
     </Tooltip>
   );

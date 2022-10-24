@@ -16,8 +16,6 @@ const Button = styled.button`
 
 const ButtonToggle = ({ active, icon, onChange, tooltip, errorMessage = null, ariaLabel }) => {
   const isMobile = useSelector((state) => state.application.isMobile);
-  console.log(`images/${icon.slice(0, )}_active.${icon.slice(-3,)}`)
-  console.log(`images/${icon}`)
 
   const [tooltipVisible, setTooltipVisible] = useState(false);
   const showTooltip = () => {

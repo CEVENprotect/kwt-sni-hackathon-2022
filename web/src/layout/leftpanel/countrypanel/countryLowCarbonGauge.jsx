@@ -11,7 +11,7 @@ export const CountryLowCarbonGauge = (props) => {
     return <CircularGauge {...props} />;
   }
 
-  const fossilFuelRatio = electricityMixMode === 'consumption' ? d.fossilFuelRatio : d.fossilFuelRatioProduction;
+  const fossilFuelRatio = electricityMixMode === 'consumption' ? d.fossilFuelRatio : d.treeOfLifeCovered;
   const countryLowCarbonPercentage = fossilFuelRatio !== null ? 100 - fossilFuelRatio * 100 : null;
 
   return <CircularGauge percentage={countryLowCarbonPercentage} {...props} />;

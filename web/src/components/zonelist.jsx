@@ -23,7 +23,7 @@ function withZoneRankings(zones) {
 }
 
 function getCo2IntensityAccessor(electricityMixMode) {
-  return (d) => (electricityMixMode === 'consumption' ? d.co2intensity : d.co2intensityProduction);
+  return (d) => (electricityMixMode === 'consumption' ? d.co2intensity : d.numberOfSpecies);
 }
 
 function sortAndValidateZones(zones, accessor) {
