@@ -43,7 +43,8 @@ function initDataState() {
     zone.config.contributors = zoneConfig.contributors;
     zone.config.timezone = zoneConfig.timezone;
     // hasParser is true if parser exists, or if estimation method exists
-    zone.config.hasParser = zoneConfig.parsers?.production !== undefined || zoneConfig.estimation_method !== undefined;
+    // zone.config.hasParser = zoneConfig.parsers?.production !== undefined || zoneConfig.estimation_method !== undefined;
+    zone.config.hasParser = true;
     zone.config.delays = zoneConfig.delays;
     zone.config.disclaimer = zoneConfig.disclaimer;
     zone.config.countryCode = key;

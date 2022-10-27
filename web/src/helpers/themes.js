@@ -1,7 +1,7 @@
 export const themes = {
   colorblindDark: {
     co2Scale: {
-      steps: [0, 100, 300, 550, 800],
+      steps: [0, 75, 150, 225, 250],
       colors: ['#000010', '#602020', '#A06030', '#E0B040', '#FFFFB0'],
     },
     oceanColor: '#33414A',
@@ -12,7 +12,7 @@ export const themes = {
   },
   dark: {
     co2Scale: {
-      steps: [0, 100, 300, 550, 800],
+      steps: [0, 75, 150, 225, 250],
       colors: ['#381D02', '#381D02', '#9E4229', '#F5EB4D', '#2AA364'],
     },
     oceanColor: '#33414A',
@@ -23,7 +23,7 @@ export const themes = {
   },
   colorblindBright: {
     co2Scale: {
-      steps: [0, 100, 300, 550, 800],
+      steps: [0, 75, 150, 225, 250],
       colors: ['#000010', '#602020', '#A06030', '#E0B040', '#FFFFB0'],
     },
     oceanColor: '#FAFAFA',
@@ -34,7 +34,7 @@ export const themes = {
   },
   bright: {
     co2Scale: {
-      steps: [0, 100, 300, 550, 800],
+      steps: [0, 75, 150, 225, 250],
       colors: ['#381D02', '#381D02', '#9E4229', '#F5EB4D', '#2AA364'],
     },
     oceanColor: '#FAFAFA',
