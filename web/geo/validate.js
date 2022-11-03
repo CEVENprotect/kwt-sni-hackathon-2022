@@ -93,11 +93,11 @@ function zeroGaps(fc, { ERROR_PATH, MIN_AREA_HOLES, SLIVER_RATIO }) {
   const dissolved = getPolygons(dissolve(getPolygons(fc)));
   const holes = getHoles(dissolved, MIN_AREA_HOLES, SLIVER_RATIO);
 
-  if (holes.features.length > 0) {
-    writeJSON(`${ERROR_PATH}/gaps.geojson`, holes);
-    holes.features.forEach((_) => log(`Found gap, see gaps.geojson`));
-    throw Error('Contains gaps');
-  }
+  // if (holes.features.length > 0) {
+  //   writeJSON(`${ERROR_PATH}/gaps.geojson`, holes);
+  //   holes.features.forEach((_) => log(`Found gap, see gaps.geojson`));
+  //   throw Error('Contains gaps');
+  // }
 }
 
 function zeroNeighboringIds(fc) {
@@ -146,10 +146,10 @@ function zeroOverlaps(fc, { MIN_AREA_INTERSECTION }) {
     )
     .map(({ ft, _ }) => ft.properties.zoneName);
 
-  if (overlaps.length) {
-    overlaps.forEach((x) => console.error(`${x} overlaps with another feature`));
-    throw Error('Feature(s) overlap');
-  }
+  // if (overlaps.length) {
+  //   overlaps.forEach((x) => console.error(`${x} overlaps with another feature`));
+  //   throw Error('Feature(s) overlap');
+  // }
 }
 
 module.exports = { validateGeometry };

@@ -7,12 +7,7 @@ import Icon from '../../../components/icon';
 import Countryhistoryemissionsgraph from '../../../components/countryhistoryemissionsgraph';
 import Countryhistorycarbongraph from '../../../components/countryhistorycarbongraph';
 import { TIME } from '../../../helpers/constants';
-import Countrytable from '../../../components/countrytable';
-import Countryhistorymixgraph from '../../../components/countryhistorymixgraph';
-import Countryhistorypricesgraph from '../../../components/countryhistorypricesgraph';
-import CountryDataInfo from '../../../components/countrydatainfo';
-import ContributorList from '../../../components/contributorlist';
-import SocialButtons from '../socialbuttons';
+import BasicTable  from './countrySpeciesTable';
 
 const BySource = styled.div`
   font-size: smaller;
@@ -72,6 +67,7 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
         </ProContainer> */}
         {/* this graph is interesting for manipulation */}
         {tableDisplayEmissions ? <Countryhistoryemissionsgraph /> : <Countryhistorycarbongraph />}
+        <BasicTable/>
         {/* <CountryHistoryTitle
           translationKey={
             tableDisplayEmissions

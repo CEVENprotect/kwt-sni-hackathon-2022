@@ -42,9 +42,9 @@ const initialApplicationState = {
   mapViewport: {
     width: window.innerWidth,
     height: window.innerHeight,
-    latitude: -1.240925649160643,
+    latitude: -1.460925649160643,
     longitude: 35.121910928386114,
-    zoom: 4,
+    zoom: 8,
   },
   onboardingSeen: getStorageBool('onboardingSeen', false),
   historicalViewIntroModalSeen: getStorageBool('historicalViewIntroModalSeen', false),
