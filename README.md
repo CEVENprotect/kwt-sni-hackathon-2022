@@ -1,4 +1,4 @@
-# Electricity Maps
+# CEVEN Biodiversity Map for KWT
 
 [![Slack Status](https://slack.electricitymaps.com/badge.svg)](https://slack.electricitymaps.com) [![CircleCI](https://circleci.com/gh/electricitymaps/electricitymaps-contrib.svg?style=shield)](https://circleci.com/gh/electricitymaps/electricitymaps-contrib) [![Twitter Follow](https://img.shields.io/twitter/follow/ElectricityMaps.svg?style=social&label=Follow)](https://twitter.com/ElectricityMaps)
 
