@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { getTooltipPosition } from '../helpers/graph';
@@ -32,7 +32,7 @@ const mapStateToProps = (state) => ({
 });
 
 // this is where data is not manipulated
-const CountryHistoryCarbonGraph = ({ electricityMixMode, isMobile }) => {
+const CountryHistorySpeciesGraph = ({ electricityMixMode, isMobile }) => {
   const [tooltip, setTooltip] = useState(null);
   const co2ColorScale = useCo2ColorScale();
   const historyData = useCurrentZoneHistory();
@@ -41,7 +41,10 @@ const CountryHistoryCarbonGraph = ({ electricityMixMode, isMobile }) => {
     () => prepareGraphData(historyData, co2ColorScale, electricityMixMode),
     [historyData, co2ColorScale, electricityMixMode]
   );
-
+  useEffect(() => {
+    console.log(historyData);
+  }, )
+  
   // Graph marker callbacks
   const markerUpdateHandler = useMemo(
     () => (position, datapoint) => {
@@ -85,4 +88,4 @@ const CountryHistoryCarbonGraph = ({ electricityMixMode, isMobile }) => {
   );
 };
 
-export default connect(mapStateToProps)(CountryHistoryCarbonGraph);
+export default connect(mapStateToProps)(CountryHistorySpeciesGraph);

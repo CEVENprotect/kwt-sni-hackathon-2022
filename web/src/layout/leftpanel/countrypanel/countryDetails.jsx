@@ -5,9 +5,9 @@ import { useSelector } from 'react-redux';
 import { CountryHistoryTitle } from '../../../components/countryhistorytitle';
 import Icon from '../../../components/icon';
 import Countryhistoryemissionsgraph from '../../../components/countryhistoryemissionsgraph';
-import Countryhistorycarbongraph from '../../../components/countryhistorycarbongraph';
+import CountryHistorySpeciesGraph from '../../../components/countryhistoryspeciesgraph';
 import { TIME } from '../../../helpers/constants';
-import BasicTable  from './countrySpeciesTable';
+import CountrySpeciesTable  from './countrySpeciesTable';
 
 const BySource = styled.div`
   font-size: smaller;
@@ -66,8 +66,13 @@ export const CountryDetails = ({ tableDisplayEmissions, electricityMixMode, data
           </a>
         </ProContainer> */}
         {/* this graph is interesting for manipulation */}
-        {tableDisplayEmissions ? <Countryhistoryemissionsgraph /> : <Countryhistorycarbongraph />}
-        <BasicTable/>
+        {tableDisplayEmissions ? <Countryhistoryemissionsgraph /> : <CountryHistorySpeciesGraph />}
+        {/* we can do something like
+        
+        {isLionMode ? <LionModeHistoryGraph/> : <SpeciesHistoryGraph/>}
+
+        */}
+        <CountrySpeciesTable/>
         {/* <CountryHistoryTitle
           translationKey={
             tableDisplayEmissions
