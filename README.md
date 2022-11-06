@@ -121,10 +121,24 @@ cd web
 yarn install #worked
 
 # go inside mockserver
+cd ../mockserver
 yarn install 
 ```
 
 ## Start Tinkering
+
+# go back to root
+
+```shell
+cd ..
+```
+
+# go to web
+
+```shell
+cd web
+```
+
 
 ```shell
 yarn run develop
