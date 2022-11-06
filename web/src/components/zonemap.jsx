@@ -5,7 +5,7 @@ import ReactMapGL, { Source, Layer } from 'react-map-gl';
 import { noop } from '../helpers/noop';
 import { isEmpty } from '../helpers/isEmpty';
 import { debounce } from '../helpers/debounce';
-import { getCO2IntensityByMode } from '../helpers/zonedata';
+import { getSpeciesNumber } from '../helpers/zonedata';
 import { ZoomControls } from './zoomcontrols';
 import { aggregatedViewFFEnabled } from '../helpers/featureFlags';
 import { useAggregatesEnabled } from '../hooks/router';
@@ -191,7 +191,7 @@ const ZoneMap = ({
       }
       zoneValues.forEach((zone, i) => {
         const zoneData = zone[selectedTimeAggregate].overviews[selectedZoneTimeIndex];
-        const co2intensity = zoneData ? getCO2IntensityByMode(zoneData, electricityMixMode) : null;
+        const co2intensity = zoneData ? getSpeciesNumber(zoneData, electricityMixMode) : null;
         const fillColor = co2ColorScale(co2intensity);
         const existingColor = map.getFeatureState({ source: 'zones-clickable', id: i }, 'color')?.color;
         if (fillColor !== existingColor) {

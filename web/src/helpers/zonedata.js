@@ -32,7 +32,7 @@ export function getExchangeCo2Intensity(mode, zoneData, electricityMixMode) {
     return exchangeCo2Intensity;
   }
 
-  return getCO2IntensityByMode(zoneData, electricityMixMode);
+  return getSpeciesNumber(zoneData, electricityMixMode);
 }
 
 export function getTotalElectricity(zoneData, displayByEmissions) {
@@ -47,6 +47,6 @@ export function getTotalElectricity(zoneData, displayByEmissions) {
     : productionValue + zoneData.totalDischarge + zoneData.totalImport;
 }
 
-export function getCO2IntensityByMode(zoneData, electricityMixMode) {
+export function getSpeciesNumber(zoneData, electricityMixMode) {
   return electricityMixMode === 'consumption' ? zoneData.co2intensity : zoneData.numberOfSpecies;
 }

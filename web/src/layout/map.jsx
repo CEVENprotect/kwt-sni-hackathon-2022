@@ -19,7 +19,7 @@ import MapCountryTooltip from '../components/tooltips/mapcountrytooltip';
 import ExchangeLayer from '../components/layers/exchangelayer';
 import SolarLayer from '../components/layers/solarlayer';
 import WindLayer from '../components/layers/windlayer';
-import { getCO2IntensityByMode } from '../helpers/zonedata';
+import { getSpeciesNumber } from '../helpers/zonedata';
 
 const debouncedReleaseMoving = debounce(() => {
   dispatchApplication('isMovingMap', false);
@@ -131,7 +131,7 @@ export default () => {
       const zoneOverview = zones[zoneId][selectedTimeAggregate].overviews[selectedZoneTimeIndex];
       const zoneConfig = zones[zoneId].config;
       if (zoneOverview) {
-        dispatchApplication('co2ColorbarValue', getCO2IntensityByMode(zoneOverview, electricityMixMode));
+        dispatchApplication('co2ColorbarValue', getSpeciesNumber(zoneOverview, electricityMixMode));
       }
       setTooltipZoneData({ ...zoneOverview, ...zoneConfig });
     },

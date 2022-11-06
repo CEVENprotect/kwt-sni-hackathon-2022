@@ -16,7 +16,7 @@ const prepareData = (historyData) => {
 
 function CountrySpeciesTable({ electricityMixMode, isMobile, zoneTimeIndex }) {
   const historyData = useCurrentZoneHistory();
-  const data = useMemo(() => prepareData(historyData), [historyData, zoneTimeIndex])  
+  const data = useMemo(() => prepareData(historyData), [historyData, zoneTimeIndex]);  
   
   const mapKeysToHeader = () => {
     if (!data[zoneTimeIndex]) return [{Header: 'Column 1', accessor: 'col1'},{Header: 'Column 2',accessor: 'col2'}];

@@ -6,7 +6,7 @@ import { CountryRenewableGauge } from './countryRenewableGauge';
 import { noop } from '../../../helpers/noop';
 import { useTranslation } from '../../../helpers/translation';
 import LowCarbonInfoTooltip from '../../../components/tooltips/lowcarboninfotooltip';
-import { getCO2IntensityByMode } from '../../../helpers/zonedata';
+import { getSpeciesNumber } from '../../../helpers/zonedata';
 
 const CountryTableHeaderInner = styled.div`
   display: flex;
@@ -24,12 +24,12 @@ export const CountryOverview = ({
 }) => {
   const [tooltip, setTooltip] = useState(null);
   const { __ } = useTranslation();
-  const co2intensity = getCO2IntensityByMode(data, electricityMixMode);
+  const speciesNumber = getSpeciesNumber(data, electricityMixMode);
 
   return (
     <React.Fragment>
       <CountryTableHeaderInner>
-        <CarbonIntensitySquare value={co2intensity} withSubtext />
+        <CarbonIntensitySquare value={speciesNumber} withSubtext />
         <div className="country-col country-lowcarbon-wrap">
           <div id="country-lowcarbon-gauge" className="country-gauge-wrap">
             <CountryLowCarbonGauge
