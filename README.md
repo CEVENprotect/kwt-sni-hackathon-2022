@@ -1,18 +1,18 @@
-# Electricity Maps
+# Biodiversity Maps
 
 ## An SNI x KWT Hackathon Project
 
 ## Project Overview
 
-| Project name        | CEVEN.life Biodiversity Map
-| :------------------ | ------------------------------------------------------------ |
-| Blog post          | [TBA]                  |
-| Dissemination level | Public                                                       |
-| Version             | 0.1                                                          |
-| Software license    | MIT License                                                  |
-| Status              | Work in progress                                              |
+| Project name        | CEVEN.life Biodiversity Map |
+| :------------------ | --------------------------- |
+| Blog post           | [TBA]                       |
+| Dissemination level | Public                      |
+| Version             | 0.1                         |
+| Software license    | MIT License                 |
+| Status              | Work in progress            |
 
-## Team 
+## Team
 
 - Yves
 - Yannick
@@ -23,13 +23,11 @@ Thanks and shoutouts to:
 
 - Sovereign Nature Initiative (https://sovereignnature.com/)
 
-Credits: 
+Credits:
 
 - https://ceven.tech/
 
-
-------
-
+---
 
 # Setup for MacOS after cloning repo
 
@@ -60,7 +58,6 @@ python -V #3.8.14
 
 Ensure you have the dependency management tool Poetry installed by this guide. The easiest is to do pip install poetry
 
-
 ```shell
 pip install poetry
 ```
@@ -73,6 +70,7 @@ tesseract --version
 ```
 
 You should be able to run linter and tests
+
 ```shell
 poetry run lint # check
 poetry run test # check
@@ -80,6 +78,7 @@ poetry run check # run both linting and tests
 ```
 
 Frontend:
+
 ```shell
 npm install --global yarn #updated yarn
 
@@ -90,7 +89,7 @@ yarn install #worked
 
 # go inside mockserver
 cd ../mockserver
-yarn install 
+yarn install
 ```
 
 ## Start the Map
@@ -107,11 +106,8 @@ go to web
 cd web
 ```
 
-
 ```shell
 yarn run develop
 # new seperate terminal
 yarn run mockserver # fails if no yarn install inside mockserver folder
 ```
-
-
