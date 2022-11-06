@@ -1,4 +1,4 @@
-# CEVEN Biodiversity Map for KWT
+# Electricity Maps
 
 ## An SNI x KWT Hackathon Project
 
