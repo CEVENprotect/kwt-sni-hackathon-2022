@@ -30,7 +30,7 @@ const headerLinks = [
   },
   {
     label: 'Blog',
-    href: 'https://electricitymaps.com/blog/?utm_source=app.electricitymaps.com&utm_medium=referral',
+    href: 'https://mirror.xyz/ineffablekod.eth',
     id: 'blog',
   },
   {
