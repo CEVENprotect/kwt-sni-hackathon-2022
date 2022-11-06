@@ -1,5 +1,5 @@
 {
-  "name": "electricitymap-app",
+  "name": "biodiversitymap-app",
   "version": "0.0.1",
   "description": "",
   "dependencies": {
@@ -14,11 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/corradio/electricitymap.git"
+    "url": "https://github.com/CEVENprotect/kwt-sni-hackathon-2022.git"
   },
   "scripts": {
-    "build": "bash build.sh",
-    "clean": "rm -rf platforms plugins src ui_web_hooks www/electricitymap"
+    "build": "bash build.sh"
   },
   "cordova": {
     "plugins": {

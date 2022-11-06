@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "electricitymap-contrib"
+name = "biodiversitymap"
 version = "0.1.0"
 description = ""
-authors = ["Electricity Maps team <app@electricityMaps.com>"]
+authors = ["Biodiversity Map team <it@ceven.tech>"]
 packages = [
-    { include = "electricitymap" }
+    { include = "biodiversitymap" }
 ]
 include = ["config/*.json"]
 
